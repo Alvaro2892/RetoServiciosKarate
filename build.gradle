@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'com.intuit.karate:karate-junit4:1.0.1'
+
+    testImplementation 'com.intuit.karate:karate-apache:0.9.6'
+
+}
+
+sourceSets{
+    test {
+        resources {
+            srcDir file('src/test/java')
+            exclude '**/*.java'
+        }
+    }
+}
+
+
+test{
+    systemProperty "cucumber.options", System.properties.getProperty ("cucumber.options")
+    systemProperty "karate.env", System.properties.getProperty ("karate.env")
+    outputs.upToDateWhen {false}
+
+}

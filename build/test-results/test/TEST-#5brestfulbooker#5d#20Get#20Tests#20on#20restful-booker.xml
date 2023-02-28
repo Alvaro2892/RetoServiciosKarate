@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="[restfulbooker] Get Tests on restful-booker" tests="4" skipped="0" failures="0" errors="0" timestamp="2023-02-28T18:30:41" hostname="DESKTOP-QTT0D1U" time="3.879">
+  <properties/>
+  <testcase name="[1:5] Get booking with id 1" classname="[restfulbooker] Get Tests on restful-booker" time="1.145"/>
+  <testcase name="[2:14] Creates a new booking in the API" classname="[restfulbooker] Get Tests on restful-booker" time="0.527"/>
+  <testcase name="[3:37] CreateToken and update booking" classname="[restfulbooker] Get Tests on restful-booker" time="1.155"/>
+  <testcase name="[4:82] CreateToken and update booking Bad request" classname="[restfulbooker] Get Tests on restful-booker" time="1.034"/>
+  <system-out><![CDATA[13:30:41.990 [Test worker] DEBUG karate.org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: karate
+13:30:41.990 [Test worker] DEBUG karate.org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+13:30:41.990 [Test worker] DEBUG com.intuit.karate - request:
+1 > GET https://restful-booker.herokuapp.com/booking/1
+1 > Accept: application/json
+1 > Host: restful-booker.herokuapp.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_321)
+1 > Accept-Encoding: gzip,deflate
+
+
+13:30:42.006 [Test worker] DEBUG karate.org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {s}->https://restful-booker.herokuapp.com:443][total available: 0; route allocated: 0 of 5; total allocated: 0 of 10]
+13:30:42.006 [Test worker] DEBUG karate.org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 0][route: {s}->https://restful-booker.herokuapp.com:443][total available: 0; route allocated: 1 of 5; total allocated: 1 of 10]
+13:30:42.006 [Test worker] DEBUG karate.org.apache.http.impl.execchain.MainClientExec - Opening connection {s}->https://restful-booker.herokuapp.com:443
+13:30:42.031 [Test worker] DEBUG karate.org.apache.http.impl.conn.DefaultHttpClientConnectionOperator - Connecting to restful-booker.herokuapp.com/107.22.57.98:443
+13:30:42.031 [Test worker] DEBUG karate.org.apache.http.conn.ssl.SSLConnectionSocketFactory - Connecting socket to restful-booker.herokuapp.com/107.22.57.98:443 with timeout 30000
+13:30:42.149 [Test worker] DEBUG karate.org.apache.http.conn.ssl.SSLConnectionSocketFactory - Enabled protocols: [TLSv1.2, TLSv1.1, TLSv1]
+13:30:42.149 [Test worker] DEBUG karate.org.apache.http.conn.ssl.SSLConnectionSocketFactory - Enabled cipher suites:[TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_DSS_WITH_AES_256_GCM_SHA384, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_DSS_WITH_AES_128_GCM_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_256_CBC_SHA256, TLS_DHE_DSS_WITH_AES_256_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_DSS_WITH_AES_256_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_256_GCM_SHA384, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_EMPTY_RENEGOTIATION_INFO_SCSV]
+13:30:42.149 [Test worker] DEBUG karate.org.apache.http.conn.ssl.SSLConnectionSocketFactory - Starting handshake
+13:30:42.496 [Test worker] DEBUG karate.org.apache.http.conn.ssl.SSLConnectionSocketFactory - Secure session established
+13:30:42.496 [Test worker] DEBUG karate.org.apache.http.conn.ssl.SSLConnectionSocketFactory -  negotiated protocol: TLSv1.2
+13:30:42.496 [Test worker] DEBUG karate.org.apache.http.conn.ssl.SSLConnectionSocketFactory -  negotiated cipher suite: TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+13:30:42.497 [Test worker] DEBUG karate.org.apache.http.conn.ssl.SSLConnectionSocketFactory -  peer principal: CN=*.herokuapp.com
+13:30:42.497 [Test worker] DEBUG karate.org.apache.http.conn.ssl.SSLConnectionSocketFactory -  peer alternative names: [*.herokuapp.com]
+13:30:42.497 [Test worker] DEBUG karate.org.apache.http.conn.ssl.SSLConnectionSocketFactory -  issuer principal: CN=Amazon RSA 2048 M02, O=Amazon, C=US
+13:30:42.497 [Test worker] DEBUG karate.org.apache.http.impl.conn.DefaultHttpClientConnectionOperator - Connection established 192.168.1.11:61515<->107.22.57.98:443
+13:30:42.497 [Test worker] DEBUG karate.org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-0: set socket timeout to 30000
+13:30:42.497 [Test worker] DEBUG karate.org.apache.http.impl.execchain.MainClientExec - Executing request GET /booking/1 HTTP/1.1
+13:30:42.497 [Test worker] DEBUG karate.org.apache.http.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
+13:30:42.497 [Test worker] DEBUG karate.org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+13:30:42.497 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-0 >> GET /booking/1 HTTP/1.1
+13:30:42.497 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-0 >> Accept: application/json
+13:30:42.497 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-0 >> Host: restful-booker.herokuapp.com
+13:30:42.497 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-0 >> Connection: Keep-Alive
+13:30:42.497 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_321)
+13:30:42.497 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+13:30:42.497 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-0 >> "GET /booking/1 HTTP/1.1[\r][\n]"
+13:30:42.497 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-0 >> "Accept: application/json[\r][\n]"
+13:30:42.497 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-0 >> "Host: restful-booker.herokuapp.com[\r][\n]"
+13:30:42.497 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+13:30:42.497 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_321)[\r][\n]"
+13:30:42.497 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+13:30:42.497 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-0 >> "[\r][\n]"
+13:30:42.652 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+13:30:42.652 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-0 << "Server: Cowboy[\r][\n]"
+13:30:42.652 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-0 << "Connection: keep-alive[\r][\n]"
+13:30:42.652 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-0 << "X-Powered-By: Express[\r][\n]"
+13:30:42.652 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-0 << "Content-Type: application/json; charset=utf-8[\r][\n]"
+13:30:42.652 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-0 << "Content-Length: 170[\r][\n]"
+13:30:42.652 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-0 << "Etag: W/"aa-waBDObUc25azXZ1Gkrz0LIEDGrg"[\r][\n]"
+13:30:42.652 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-0 << "Date: Tue, 28 Feb 2023 18:30:42 GMT[\r][\n]"
+13:30:42.652 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-0 << "Via: 1.1 vegur[\r][\n]"
+13:30:42.652 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-0 << "[\r][\n]"
+13:30:42.652 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-0 << "{"firstname":"James","lastname":"Brown","totalprice":111,"depositpaid":true,"bookingdates":{"checkin":"2018-01-01","checkout":"2019-01-01"},"additionalneeds":"Breakfast"}"
+13:30:42.668 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-0 << HTTP/1.1 200 OK
+13:30:42.668 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-0 << Server: Cowboy
+13:30:42.668 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-0 << Connection: keep-alive
+13:30:42.668 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-0 << X-Powered-By: Express
+13:30:42.668 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-0 << Content-Type: application/json; charset=utf-8
+13:30:42.668 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-0 << Content-Length: 170
+13:30:42.668 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-0 << Etag: W/"aa-waBDObUc25azXZ1Gkrz0LIEDGrg"
+13:30:42.669 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-0 << Date: Tue, 28 Feb 2023 18:30:42 GMT
+13:30:42.669 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-0 << Via: 1.1 vegur
+13:30:42.669 [Test worker] DEBUG karate.org.apache.http.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
+13:30:42.669 [Test worker] DEBUG karate.org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection [id: 0][route: {s}->https://restful-booker.herokuapp.com:443] can be kept alive indefinitely
+13:30:42.669 [Test worker] DEBUG karate.org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-0: set socket timeout to 0
+13:30:42.669 [Test worker] DEBUG karate.org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection released: [id: 0][route: {s}->https://restful-booker.herokuapp.com:443][total available: 1; route allocated: 1 of 5; total allocated: 1 of 10]
+13:30:42.684 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 679
+1 < 200
+1 < Server: Cowboy
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 170
+1 < Etag: W/"aa-waBDObUc25azXZ1Gkrz0LIEDGrg"
+1 < Date: Tue, 28 Feb 2023 18:30:42 GMT
+1 < Via: 1.1 vegur
+{"firstname":"James","additionalneeds":"Breakfast","bookingdates":{"checkin":"2018-01-01","checkout":"2019-01-01"},"totalprice":111,"depositpaid":true,"lastname":"Brown"}
+13:30:42.730 [Test worker] INFO com.intuit.karate - [print] {
+  "firstname": "James",
+  "additionalneeds": "Breakfast",
+  "bookingdates": {
+    "checkin": "2018-01-01",
+    "checkout": "2019-01-01"
+  },
+  "totalprice": 111,
+  "depositpaid": true,
+  "lastname": "Brown"
+}
+ 
+13:30:42.747 [Test worker] DEBUG com.jayway.jsonpath.internal.path.CompiledPath - Evaluating path: $
+13:30:42.762 [Test worker] DEBUG karate.io.netty.util.internal.logging.InternalLoggerFactory - Using SLF4J as the default logging framework
+13:30:42.762 [Test worker] DEBUG karate.io.netty.util.internal.PlatformDependent - Platform: Windows
+13:30:42.762 [Test worker] DEBUG karate.io.netty.util.internal.PlatformDependent0 - -Dio.netty.noUnsafe: false
+13:30:42.762 [Test worker] DEBUG karate.io.netty.util.internal.PlatformDependent0 - Java version: 8
+13:30:42.762 [Test worker] DEBUG karate.io.netty.util.internal.PlatformDependent0 - sun.misc.Unsafe.theUnsafe: available
+13:30:42.762 [Test worker] DEBUG karate.io.netty.util.internal.PlatformDependent0 - sun.misc.Unsafe.copyMemory: available
+13:30:42.762 [Test worker] DEBUG karate.io.netty.util.internal.PlatformDependent0 - java.nio.Buffer.address: available
+13:30:42.762 [Test worker] DEBUG karate.io.netty.util.internal.PlatformDependent0 - direct buffer constructor: available
+13:30:42.762 [Test worker] DEBUG karate.io.netty.util.internal.PlatformDependent0 - java.nio.Bits.unaligned: available, true
+13:30:42.762 [Test worker] DEBUG karate.io.netty.util.internal.PlatformDependent0 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+13:30:42.762 [Test worker] DEBUG karate.io.netty.util.internal.PlatformDependent0 - java.nio.DirectByteBuffer.<init>(long, int): available
+13:30:42.762 [Test worker] DEBUG karate.io.netty.util.internal.PlatformDependent - sun.misc.Unsafe: available
+13:30:42.762 [Test worker] DEBUG karate.io.netty.util.internal.PlatformDependent - -Dio.netty.tmpdir: C:\Users\ASUS\AppData\Local\Temp (java.io.tmpdir)
+13:30:42.762 [Test worker] DEBUG karate.io.netty.util.internal.PlatformDependent - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+13:30:42.762 [Test worker] DEBUG karate.io.netty.util.internal.PlatformDependent - -Dio.netty.maxDirectMemory: 477626368 bytes
+13:30:42.762 [Test worker] DEBUG karate.io.netty.util.internal.PlatformDependent - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+13:30:42.762 [Test worker] DEBUG karate.io.netty.util.internal.CleanerJava6 - java.nio.ByteBuffer.cleaner(): available
+13:30:42.762 [Test worker] DEBUG karate.io.netty.util.internal.PlatformDependent - -Dio.netty.noPreferDirect: false
+13:30:42.778 [Test worker] DEBUG karate.org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: karate
+13:30:42.778 [Test worker] DEBUG karate.org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+13:30:42.778 [Test worker] DEBUG com.intuit.karate - request:
+1 > POST https://restful-booker.herokuapp.com/booking/
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > Content-Length: 172
+1 > Host: restful-booker.herokuapp.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_321)
+1 > Accept-Encoding: gzip,deflate
+{"firstname":"Alvaro","additionalneeds":"Breakfast","bookingdates":{"checkin":"2023-02-28","checkout":"2019-03-28"},"totalprice":111,"depositpaid":true,"lastname":"Angulo"}
+
+13:30:42.778 [Test worker] DEBUG karate.org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {s}->https://restful-booker.herokuapp.com:443][total available: 0; route allocated: 0 of 5; total allocated: 0 of 10]
+13:30:42.778 [Test worker] DEBUG karate.org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 1][route: {s}->https://restful-booker.herokuapp.com:443][total available: 0; route allocated: 1 of 5; total allocated: 1 of 10]
+13:30:42.778 [Test worker] DEBUG karate.org.apache.http.impl.execchain.MainClientExec - Opening connection {s}->https://restful-booker.herokuapp.com:443
+13:30:42.778 [Test worker] DEBUG karate.org.apache.http.impl.conn.DefaultHttpClientConnectionOperator - Connecting to restful-booker.herokuapp.com/107.22.57.98:443
+13:30:42.778 [Test worker] DEBUG karate.org.apache.http.conn.ssl.SSLConnectionSocketFactory - Connecting socket to restful-booker.herokuapp.com/107.22.57.98:443 with timeout 30000
+13:30:42.872 [Test worker] DEBUG karate.org.apache.http.conn.ssl.SSLConnectionSocketFactory - Enabled protocols: [TLSv1.2, TLSv1.1, TLSv1]
+13:30:42.888 [Test worker] DEBUG karate.org.apache.http.conn.ssl.SSLConnectionSocketFactory - Enabled cipher suites:[TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_DSS_WITH_AES_256_GCM_SHA384, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_DSS_WITH_AES_128_GCM_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_256_CBC_SHA256, TLS_DHE_DSS_WITH_AES_256_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_DSS_WITH_AES_256_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_256_GCM_SHA384, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_EMPTY_RENEGOTIATION_INFO_SCSV]
+13:30:42.888 [Test worker] DEBUG karate.org.apache.http.conn.ssl.SSLConnectionSocketFactory - Starting handshake
+13:30:43.107 [Test worker] DEBUG karate.org.apache.http.conn.ssl.SSLConnectionSocketFactory - Secure session established
+13:30:43.107 [Test worker] DEBUG karate.org.apache.http.conn.ssl.SSLConnectionSocketFactory -  negotiated protocol: TLSv1.2
+13:30:43.107 [Test worker] DEBUG karate.org.apache.http.conn.ssl.SSLConnectionSocketFactory -  negotiated cipher suite: TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+13:30:43.107 [Test worker] DEBUG karate.org.apache.http.conn.ssl.SSLConnectionSocketFactory -  peer principal: CN=*.herokuapp.com
+13:30:43.107 [Test worker] DEBUG karate.org.apache.http.conn.ssl.SSLConnectionSocketFactory -  peer alternative names: [*.herokuapp.com]
+13:30:43.107 [Test worker] DEBUG karate.org.apache.http.conn.ssl.SSLConnectionSocketFactory -  issuer principal: CN=Amazon RSA 2048 M02, O=Amazon, C=US
+13:30:43.107 [Test worker] DEBUG karate.org.apache.http.impl.conn.DefaultHttpClientConnectionOperator - Connection established 192.168.1.11:61516<->107.22.57.98:443
+13:30:43.107 [Test worker] DEBUG karate.org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-1: set socket timeout to 30000
+13:30:43.107 [Test worker] DEBUG karate.org.apache.http.impl.execchain.MainClientExec - Executing request POST /booking/ HTTP/1.1
+13:30:43.107 [Test worker] DEBUG karate.org.apache.http.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
+13:30:43.107 [Test worker] DEBUG karate.org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+13:30:43.107 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-1 >> POST /booking/ HTTP/1.1
+13:30:43.107 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-1 >> Content-Type: application/json; charset=UTF-8
+13:30:43.107 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-1 >> Accept: application/json
+13:30:43.107 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-1 >> Content-Length: 172
+13:30:43.107 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-1 >> Host: restful-booker.herokuapp.com
+13:30:43.107 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-1 >> Connection: Keep-Alive
+13:30:43.107 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-1 >> User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_321)
+13:30:43.107 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-1 >> Accept-Encoding: gzip,deflate
+13:30:43.121 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-1 >> "POST /booking/ HTTP/1.1[\r][\n]"
+13:30:43.121 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-1 >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+13:30:43.121 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-1 >> "Accept: application/json[\r][\n]"
+13:30:43.121 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-1 >> "Content-Length: 172[\r][\n]"
+13:30:43.121 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-1 >> "Host: restful-booker.herokuapp.com[\r][\n]"
+13:30:43.121 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-1 >> "Connection: Keep-Alive[\r][\n]"
+13:30:43.121 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-1 >> "User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_321)[\r][\n]"
+13:30:43.121 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-1 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+13:30:43.121 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-1 >> "[\r][\n]"
+13:30:43.121 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-1 >> "{"firstname":"Alvaro","lastname":"Angulo","totalprice":111,"depositpaid":true,"bookingdates":{"checkin":"2023-02-28","checkout":"2019-03-28"},"additionalneeds":"Breakfast"}"
+13:30:43.249 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-1 << "HTTP/1.1 200 OK[\r][\n]"
+13:30:43.249 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-1 << "Server: Cowboy[\r][\n]"
+13:30:43.249 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-1 << "Connection: keep-alive[\r][\n]"
+13:30:43.249 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-1 << "X-Powered-By: Express[\r][\n]"
+13:30:43.249 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-1 << "Content-Type: application/json; charset=utf-8[\r][\n]"
+13:30:43.249 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-1 << "Content-Length: 201[\r][\n]"
+13:30:43.249 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-1 << "Etag: W/"c9-cN+f+wTbbZztX/Ym9rUd+hONh3w"[\r][\n]"
+13:30:43.249 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-1 << "Date: Tue, 28 Feb 2023 18:30:43 GMT[\r][\n]"
+13:30:43.249 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-1 << "Via: 1.1 vegur[\r][\n]"
+13:30:43.249 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-1 << "[\r][\n]"
+13:30:43.249 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-1 << "{"bookingid":9386,"booking":{"firstname":"Alvaro","lastname":"Angulo","totalprice":111,"depositpaid":true,"bookingdates":{"checkin":"2023-02-28","checkout":"2019-03-28"},"additionalneeds":"Breakfast"}}"
+13:30:43.249 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-1 << HTTP/1.1 200 OK
+13:30:43.249 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-1 << Server: Cowboy
+13:30:43.249 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-1 << Connection: keep-alive
+13:30:43.249 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-1 << X-Powered-By: Express
+13:30:43.249 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-1 << Content-Type: application/json; charset=utf-8
+13:30:43.249 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-1 << Content-Length: 201
+13:30:43.249 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-1 << Etag: W/"c9-cN+f+wTbbZztX/Ym9rUd+hONh3w"
+13:30:43.249 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-1 << Date: Tue, 28 Feb 2023 18:30:43 GMT
+13:30:43.249 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-1 << Via: 1.1 vegur
+13:30:43.249 [Test worker] DEBUG karate.org.apache.http.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
+13:30:43.249 [Test worker] DEBUG karate.org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection [id: 1][route: {s}->https://restful-booker.herokuapp.com:443] can be kept alive indefinitely
+13:30:43.249 [Test worker] DEBUG karate.org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-1: set socket timeout to 0
+13:30:43.249 [Test worker] DEBUG karate.org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection released: [id: 1][route: {s}->https://restful-booker.herokuapp.com:443][total available: 1; route allocated: 1 of 5; total allocated: 1 of 10]
+13:30:43.249 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 471
+1 < 200
+1 < Server: Cowboy
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 201
+1 < Etag: W/"c9-cN+f+wTbbZztX/Ym9rUd+hONh3w"
+1 < Date: Tue, 28 Feb 2023 18:30:43 GMT
+1 < Via: 1.1 vegur
+{"booking":{"firstname":"Alvaro","additionalneeds":"Breakfast","bookingdates":{"checkin":"2023-02-28","checkout":"2019-03-28"},"totalprice":111,"depositpaid":true,"lastname":"Angulo"},"bookingid":9386}
+13:30:43.257 [Test worker] INFO com.intuit.karate - [print] {
+  "booking": {
+    "firstname": "Alvaro",
+    "additionalneeds": "Breakfast",
+    "bookingdates": {
+      "checkin": "2023-02-28",
+      "checkout": "2019-03-28"
+    },
+    "totalprice": 111,
+    "depositpaid": true,
+    "lastname": "Angulo"
+  },
+  "bookingid": 9386
+}
+ 
+13:30:43.266 [Test worker] DEBUG com.jayway.jsonpath.internal.path.CompiledPath - Evaluating path: $
+13:30:43.266 [Test worker] DEBUG karate.org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: karate
+13:30:43.266 [Test worker] DEBUG karate.org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+13:30:43.266 [Test worker] DEBUG com.intuit.karate - request:
+1 > POST https://restful-booker.herokuapp.com/auth
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 45
+1 > Host: restful-booker.herokuapp.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_321)
+1 > Accept-Encoding: gzip,deflate
+{"password":"password123","username":"admin"}
+
+13:30:43.266 [Test worker] DEBUG karate.org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {s}->https://restful-booker.herokuapp.com:443][total available: 0; route allocated: 0 of 5; total allocated: 0 of 10]
+13:30:43.266 [Test worker] DEBUG karate.org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 2][route: {s}->https://restful-booker.herokuapp.com:443][total available: 0; route allocated: 1 of 5; total allocated: 1 of 10]
+13:30:43.266 [Test worker] DEBUG karate.org.apache.http.impl.execchain.MainClientExec - Opening connection {s}->https://restful-booker.herokuapp.com:443
+13:30:43.266 [Test worker] DEBUG karate.org.apache.http.impl.conn.DefaultHttpClientConnectionOperator - Connecting to restful-booker.herokuapp.com/107.22.57.98:443
+13:30:43.266 [Test worker] DEBUG karate.org.apache.http.conn.ssl.SSLConnectionSocketFactory - Connecting socket to restful-booker.herokuapp.com/107.22.57.98:443 with timeout 30000
+13:30:43.374 [Test worker] DEBUG karate.org.apache.http.conn.ssl.SSLConnectionSocketFactory - Enabled protocols: [TLSv1.2, TLSv1.1, TLSv1]
+13:30:43.374 [Test worker] DEBUG karate.org.apache.http.conn.ssl.SSLConnectionSocketFactory - Enabled cipher suites:[TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_DSS_WITH_AES_256_GCM_SHA384, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_DSS_WITH_AES_128_GCM_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_256_CBC_SHA256, TLS_DHE_DSS_WITH_AES_256_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_DSS_WITH_AES_256_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_256_GCM_SHA384, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_EMPTY_RENEGOTIATION_INFO_SCSV]
+13:30:43.374 [Test worker] DEBUG karate.org.apache.http.conn.ssl.SSLConnectionSocketFactory - Starting handshake
+13:30:43.688 [Test worker] DEBUG karate.org.apache.http.conn.ssl.SSLConnectionSocketFactory - Secure session established
+13:30:43.688 [Test worker] DEBUG karate.org.apache.http.conn.ssl.SSLConnectionSocketFactory -  negotiated protocol: TLSv1.2
+13:30:43.688 [Test worker] DEBUG karate.org.apache.http.conn.ssl.SSLConnectionSocketFactory -  negotiated cipher suite: TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+13:30:43.688 [Test worker] DEBUG karate.org.apache.http.conn.ssl.SSLConnectionSocketFactory -  peer principal: CN=*.herokuapp.com
+13:30:43.688 [Test worker] DEBUG karate.org.apache.http.conn.ssl.SSLConnectionSocketFactory -  peer alternative names: [*.herokuapp.com]
+13:30:43.688 [Test worker] DEBUG karate.org.apache.http.conn.ssl.SSLConnectionSocketFactory -  issuer principal: CN=Amazon RSA 2048 M02, O=Amazon, C=US
+13:30:43.688 [Test worker] DEBUG karate.org.apache.http.impl.conn.DefaultHttpClientConnectionOperator - Connection established 192.168.1.11:61517<->107.22.57.98:443
+13:30:43.688 [Test worker] DEBUG karate.org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-2: set socket timeout to 30000
+13:30:43.688 [Test worker] DEBUG karate.org.apache.http.impl.execchain.MainClientExec - Executing request POST /auth HTTP/1.1
+13:30:43.688 [Test worker] DEBUG karate.org.apache.http.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
+13:30:43.688 [Test worker] DEBUG karate.org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+13:30:43.688 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-2 >> POST /auth HTTP/1.1
+13:30:43.688 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-2 >> Content-Type: application/json; charset=UTF-8
+13:30:43.688 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-2 >> Content-Length: 45
+13:30:43.688 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-2 >> Host: restful-booker.herokuapp.com
+13:30:43.688 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-2 >> Connection: Keep-Alive
+13:30:43.688 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-2 >> User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_321)
+13:30:43.688 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-2 >> Accept-Encoding: gzip,deflate
+13:30:43.688 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-2 >> "POST /auth HTTP/1.1[\r][\n]"
+13:30:43.688 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-2 >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+13:30:43.688 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-2 >> "Content-Length: 45[\r][\n]"
+13:30:43.688 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-2 >> "Host: restful-booker.herokuapp.com[\r][\n]"
+13:30:43.688 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-2 >> "Connection: Keep-Alive[\r][\n]"
+13:30:43.688 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-2 >> "User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_321)[\r][\n]"
+13:30:43.688 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-2 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+13:30:43.688 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-2 >> "[\r][\n]"
+13:30:43.688 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-2 >> "{"username":"admin","password":"password123"}"
+13:30:43.799 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-2 << "HTTP/1.1 200 OK[\r][\n]"
+13:30:43.799 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-2 << "Server: Cowboy[\r][\n]"
+13:30:43.799 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-2 << "Connection: keep-alive[\r][\n]"
+13:30:43.799 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-2 << "X-Powered-By: Express[\r][\n]"
+13:30:43.799 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-2 << "Content-Type: application/json; charset=utf-8[\r][\n]"
+13:30:43.799 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-2 << "Content-Length: 27[\r][\n]"
+13:30:43.799 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-2 << "Etag: W/"1b-FUom+OC2yY+oC6iM53+bm6npvoQ"[\r][\n]"
+13:30:43.799 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-2 << "Date: Tue, 28 Feb 2023 18:30:44 GMT[\r][\n]"
+13:30:43.799 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-2 << "Via: 1.1 vegur[\r][\n]"
+13:30:43.799 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-2 << "[\r][\n]"
+13:30:43.799 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-2 << "{"token":"34d5c4bb62478a9"}"
+13:30:43.799 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-2 << HTTP/1.1 200 OK
+13:30:43.799 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-2 << Server: Cowboy
+13:30:43.799 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-2 << Connection: keep-alive
+13:30:43.799 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-2 << X-Powered-By: Express
+13:30:43.799 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-2 << Content-Type: application/json; charset=utf-8
+13:30:43.799 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-2 << Content-Length: 27
+13:30:43.799 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-2 << Etag: W/"1b-FUom+OC2yY+oC6iM53+bm6npvoQ"
+13:30:43.799 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-2 << Date: Tue, 28 Feb 2023 18:30:44 GMT
+13:30:43.799 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-2 << Via: 1.1 vegur
+13:30:43.799 [Test worker] DEBUG karate.org.apache.http.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
+13:30:43.799 [Test worker] DEBUG karate.org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection [id: 2][route: {s}->https://restful-booker.herokuapp.com:443] can be kept alive indefinitely
+13:30:43.799 [Test worker] DEBUG karate.org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-2: set socket timeout to 0
+13:30:43.799 [Test worker] DEBUG karate.org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection released: [id: 2][route: {s}->https://restful-booker.herokuapp.com:443][total available: 1; route allocated: 1 of 5; total allocated: 1 of 10]
+13:30:43.799 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 533
+1 < 200
+1 < Server: Cowboy
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 27
+1 < Etag: W/"1b-FUom+OC2yY+oC6iM53+bm6npvoQ"
+1 < Date: Tue, 28 Feb 2023 18:30:44 GMT
+1 < Via: 1.1 vegur
+{"token":"34d5c4bb62478a9"}
+13:30:43.799 [Test worker] INFO com.intuit.karate - [print] {
+  "token": "34d5c4bb62478a9"
+}
+ 
+13:30:43.799 [Test worker] INFO com.intuit.karate - [print] Tenemos el token mira :34d5c4bb62478a9 
+13:30:43.799 [Test worker] DEBUG com.jayway.jsonpath.internal.path.CompiledPath - Evaluating path: $
+13:30:43.799 [Test worker] DEBUG karate.org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: karate
+13:30:43.799 [Test worker] DEBUG karate.org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+13:30:43.799 [Test worker] DEBUG com.intuit.karate - request:
+2 > PUT https://restful-booker.herokuapp.com/booking/1
+2 > Content-Type: application/json; charset=UTF-8
+2 > Accept: application/json
+2 > Cookie: token=34d5c4bb62478a9
+2 > Content-Length: 170
+2 > Host: restful-booker.herokuapp.com
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_321)
+2 > Accept-Encoding: gzip,deflate
+{"firstname":"James","additionalneeds":"Breakfast","bookingdates":{"checkin":"2018-01-01","checkout":"2019-01-01"},"totalprice":111,"depositpaid":true,"lastname":"Brown"}
+
+13:30:43.799 [Test worker] DEBUG karate.org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {s}->https://restful-booker.herokuapp.com:443][total available: 0; route allocated: 0 of 5; total allocated: 0 of 10]
+13:30:43.799 [Test worker] DEBUG karate.org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 3][route: {s}->https://restful-booker.herokuapp.com:443][total available: 0; route allocated: 1 of 5; total allocated: 1 of 10]
+13:30:43.799 [Test worker] DEBUG karate.org.apache.http.impl.execchain.MainClientExec - Opening connection {s}->https://restful-booker.herokuapp.com:443
+13:30:43.799 [Test worker] DEBUG karate.org.apache.http.impl.conn.DefaultHttpClientConnectionOperator - Connecting to restful-booker.herokuapp.com/107.22.57.98:443
+13:30:43.799 [Test worker] DEBUG karate.org.apache.http.conn.ssl.SSLConnectionSocketFactory - Connecting socket to restful-booker.herokuapp.com/107.22.57.98:443 with timeout 30000
+13:30:43.909 [Test worker] DEBUG karate.org.apache.http.conn.ssl.SSLConnectionSocketFactory - Enabled protocols: [TLSv1.2, TLSv1.1, TLSv1]
+13:30:43.909 [Test worker] DEBUG karate.org.apache.http.conn.ssl.SSLConnectionSocketFactory - Enabled cipher suites:[TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_DSS_WITH_AES_256_GCM_SHA384, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_DSS_WITH_AES_128_GCM_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_256_CBC_SHA256, TLS_DHE_DSS_WITH_AES_256_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_DSS_WITH_AES_256_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_256_GCM_SHA384, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_EMPTY_RENEGOTIATION_INFO_SCSV]
+13:30:43.909 [Test worker] DEBUG karate.org.apache.http.conn.ssl.SSLConnectionSocketFactory - Starting handshake
+13:30:44.287 [Test worker] DEBUG karate.org.apache.http.conn.ssl.SSLConnectionSocketFactory - Secure session established
+13:30:44.287 [Test worker] DEBUG karate.org.apache.http.conn.ssl.SSLConnectionSocketFactory -  negotiated protocol: TLSv1.2
+13:30:44.287 [Test worker] DEBUG karate.org.apache.http.conn.ssl.SSLConnectionSocketFactory -  negotiated cipher suite: TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+13:30:44.287 [Test worker] DEBUG karate.org.apache.http.conn.ssl.SSLConnectionSocketFactory -  peer principal: CN=*.herokuapp.com
+13:30:44.287 [Test worker] DEBUG karate.org.apache.http.conn.ssl.SSLConnectionSocketFactory -  peer alternative names: [*.herokuapp.com]
+13:30:44.287 [Test worker] DEBUG karate.org.apache.http.conn.ssl.SSLConnectionSocketFactory -  issuer principal: CN=Amazon RSA 2048 M02, O=Amazon, C=US
+13:30:44.287 [Test worker] DEBUG karate.org.apache.http.impl.conn.DefaultHttpClientConnectionOperator - Connection established 192.168.1.11:61518<->107.22.57.98:443
+13:30:44.287 [Test worker] DEBUG karate.org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-3: set socket timeout to 30000
+13:30:44.302 [Test worker] DEBUG karate.org.apache.http.impl.execchain.MainClientExec - Executing request PUT /booking/1 HTTP/1.1
+13:30:44.302 [Test worker] DEBUG karate.org.apache.http.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
+13:30:44.302 [Test worker] DEBUG karate.org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+13:30:44.302 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-3 >> PUT /booking/1 HTTP/1.1
+13:30:44.302 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-3 >> Content-Type: application/json; charset=UTF-8
+13:30:44.302 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-3 >> Accept: application/json
+13:30:44.302 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-3 >> Cookie: token=34d5c4bb62478a9
+13:30:44.302 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-3 >> Content-Length: 170
+13:30:44.302 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-3 >> Host: restful-booker.herokuapp.com
+13:30:44.302 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-3 >> Connection: Keep-Alive
+13:30:44.302 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-3 >> User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_321)
+13:30:44.302 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-3 >> Accept-Encoding: gzip,deflate
+13:30:44.302 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-3 >> "PUT /booking/1 HTTP/1.1[\r][\n]"
+13:30:44.302 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-3 >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+13:30:44.302 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-3 >> "Accept: application/json[\r][\n]"
+13:30:44.302 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-3 >> "Cookie: token=34d5c4bb62478a9[\r][\n]"
+13:30:44.302 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-3 >> "Content-Length: 170[\r][\n]"
+13:30:44.302 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-3 >> "Host: restful-booker.herokuapp.com[\r][\n]"
+13:30:44.302 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-3 >> "Connection: Keep-Alive[\r][\n]"
+13:30:44.302 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-3 >> "User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_321)[\r][\n]"
+13:30:44.302 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-3 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+13:30:44.302 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-3 >> "[\r][\n]"
+13:30:44.302 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-3 >> "{"firstname":"James","lastname":"Brown","totalprice":111,"depositpaid":true,"bookingdates":{"checkin":"2018-01-01","checkout":"2019-01-01"},"additionalneeds":"Breakfast"}"
+13:30:44.414 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-3 << "HTTP/1.1 200 OK[\r][\n]"
+13:30:44.414 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-3 << "Server: Cowboy[\r][\n]"
+13:30:44.414 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-3 << "Connection: keep-alive[\r][\n]"
+13:30:44.414 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-3 << "X-Powered-By: Express[\r][\n]"
+13:30:44.414 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-3 << "Content-Type: application/json; charset=utf-8[\r][\n]"
+13:30:44.414 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-3 << "Content-Length: 170[\r][\n]"
+13:30:44.414 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-3 << "Etag: W/"aa-waBDObUc25azXZ1Gkrz0LIEDGrg"[\r][\n]"
+13:30:44.414 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-3 << "Date: Tue, 28 Feb 2023 18:30:44 GMT[\r][\n]"
+13:30:44.414 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-3 << "Via: 1.1 vegur[\r][\n]"
+13:30:44.414 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-3 << "[\r][\n]"
+13:30:44.414 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-3 << "{"firstname":"James","lastname":"Brown","totalprice":111,"depositpaid":true,"bookingdates":{"checkin":"2018-01-01","checkout":"2019-01-01"},"additionalneeds":"Breakfast"}"
+13:30:44.414 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-3 << HTTP/1.1 200 OK
+13:30:44.414 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-3 << Server: Cowboy
+13:30:44.414 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-3 << Connection: keep-alive
+13:30:44.414 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-3 << X-Powered-By: Express
+13:30:44.414 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-3 << Content-Type: application/json; charset=utf-8
+13:30:44.414 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-3 << Content-Length: 170
+13:30:44.414 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-3 << Etag: W/"aa-waBDObUc25azXZ1Gkrz0LIEDGrg"
+13:30:44.414 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-3 << Date: Tue, 28 Feb 2023 18:30:44 GMT
+13:30:44.414 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-3 << Via: 1.1 vegur
+13:30:44.414 [Test worker] DEBUG karate.org.apache.http.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
+13:30:44.414 [Test worker] DEBUG karate.org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection [id: 3][route: {s}->https://restful-booker.herokuapp.com:443] can be kept alive indefinitely
+13:30:44.414 [Test worker] DEBUG karate.org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-3: set socket timeout to 0
+13:30:44.414 [Test worker] DEBUG karate.org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection released: [id: 3][route: {s}->https://restful-booker.herokuapp.com:443][total available: 1; route allocated: 1 of 5; total allocated: 1 of 10]
+13:30:44.414 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 615
+2 < 200
+2 < Server: Cowboy
+2 < Connection: keep-alive
+2 < X-Powered-By: Express
+2 < Content-Type: application/json; charset=utf-8
+2 < Content-Length: 170
+2 < Etag: W/"aa-waBDObUc25azXZ1Gkrz0LIEDGrg"
+2 < Date: Tue, 28 Feb 2023 18:30:44 GMT
+2 < Via: 1.1 vegur
+{"firstname":"James","additionalneeds":"Breakfast","bookingdates":{"checkin":"2018-01-01","checkout":"2019-01-01"},"totalprice":111,"depositpaid":true,"lastname":"Brown"}
+13:30:44.414 [Test worker] INFO com.intuit.karate - [print] {
+  "firstname": "James",
+  "additionalneeds": "Breakfast",
+  "bookingdates": {
+    "checkin": "2018-01-01",
+    "checkout": "2019-01-01"
+  },
+  "totalprice": 111,
+  "depositpaid": true,
+  "lastname": "Brown"
+}
+ 
+13:30:44.427 [Test worker] DEBUG com.jayway.jsonpath.internal.path.CompiledPath - Evaluating path: $
+13:30:44.427 [Test worker] DEBUG karate.org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: karate
+13:30:44.427 [Test worker] DEBUG karate.org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+13:30:44.427 [Test worker] DEBUG com.intuit.karate - request:
+1 > POST https://restful-booker.herokuapp.com/auth
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 45
+1 > Host: restful-booker.herokuapp.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_321)
+1 > Accept-Encoding: gzip,deflate
+{"password":"password123","username":"admin"}
+
+13:30:44.427 [Test worker] DEBUG karate.org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {s}->https://restful-booker.herokuapp.com:443][total available: 0; route allocated: 0 of 5; total allocated: 0 of 10]
+13:30:44.427 [Test worker] DEBUG karate.org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 4][route: {s}->https://restful-booker.herokuapp.com:443][total available: 0; route allocated: 1 of 5; total allocated: 1 of 10]
+13:30:44.427 [Test worker] DEBUG karate.org.apache.http.impl.execchain.MainClientExec - Opening connection {s}->https://restful-booker.herokuapp.com:443
+13:30:44.427 [Test worker] DEBUG karate.org.apache.http.impl.conn.DefaultHttpClientConnectionOperator - Connecting to restful-booker.herokuapp.com/107.22.57.98:443
+13:30:44.427 [Test worker] DEBUG karate.org.apache.http.conn.ssl.SSLConnectionSocketFactory - Connecting socket to restful-booker.herokuapp.com/107.22.57.98:443 with timeout 30000
+13:30:44.522 [Test worker] DEBUG karate.org.apache.http.conn.ssl.SSLConnectionSocketFactory - Enabled protocols: [TLSv1.2, TLSv1.1, TLSv1]
+13:30:44.522 [Test worker] DEBUG karate.org.apache.http.conn.ssl.SSLConnectionSocketFactory - Enabled cipher suites:[TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_DSS_WITH_AES_256_GCM_SHA384, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_DSS_WITH_AES_128_GCM_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_256_CBC_SHA256, TLS_DHE_DSS_WITH_AES_256_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_DSS_WITH_AES_256_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_256_GCM_SHA384, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_EMPTY_RENEGOTIATION_INFO_SCSV]
+13:30:44.522 [Test worker] DEBUG karate.org.apache.http.conn.ssl.SSLConnectionSocketFactory - Starting handshake
+13:30:44.741 [Test worker] DEBUG karate.org.apache.http.conn.ssl.SSLConnectionSocketFactory - Secure session established
+13:30:44.741 [Test worker] DEBUG karate.org.apache.http.conn.ssl.SSLConnectionSocketFactory -  negotiated protocol: TLSv1.2
+13:30:44.741 [Test worker] DEBUG karate.org.apache.http.conn.ssl.SSLConnectionSocketFactory -  negotiated cipher suite: TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+13:30:44.741 [Test worker] DEBUG karate.org.apache.http.conn.ssl.SSLConnectionSocketFactory -  peer principal: CN=*.herokuapp.com
+13:30:44.741 [Test worker] DEBUG karate.org.apache.http.conn.ssl.SSLConnectionSocketFactory -  peer alternative names: [*.herokuapp.com]
+13:30:44.741 [Test worker] DEBUG karate.org.apache.http.conn.ssl.SSLConnectionSocketFactory -  issuer principal: CN=Amazon RSA 2048 M02, O=Amazon, C=US
+13:30:44.741 [Test worker] DEBUG karate.org.apache.http.impl.conn.DefaultHttpClientConnectionOperator - Connection established 192.168.1.11:61519<->107.22.57.98:443
+13:30:44.741 [Test worker] DEBUG karate.org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-4: set socket timeout to 30000
+13:30:44.741 [Test worker] DEBUG karate.org.apache.http.impl.execchain.MainClientExec - Executing request POST /auth HTTP/1.1
+13:30:44.741 [Test worker] DEBUG karate.org.apache.http.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
+13:30:44.741 [Test worker] DEBUG karate.org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+13:30:44.741 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-4 >> POST /auth HTTP/1.1
+13:30:44.741 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-4 >> Content-Type: application/json; charset=UTF-8
+13:30:44.741 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-4 >> Content-Length: 45
+13:30:44.741 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-4 >> Host: restful-booker.herokuapp.com
+13:30:44.741 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-4 >> Connection: Keep-Alive
+13:30:44.741 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-4 >> User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_321)
+13:30:44.741 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-4 >> Accept-Encoding: gzip,deflate
+13:30:44.741 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-4 >> "POST /auth HTTP/1.1[\r][\n]"
+13:30:44.741 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-4 >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+13:30:44.741 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-4 >> "Content-Length: 45[\r][\n]"
+13:30:44.741 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-4 >> "Host: restful-booker.herokuapp.com[\r][\n]"
+13:30:44.741 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-4 >> "Connection: Keep-Alive[\r][\n]"
+13:30:44.741 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-4 >> "User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_321)[\r][\n]"
+13:30:44.741 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-4 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+13:30:44.741 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-4 >> "[\r][\n]"
+13:30:44.741 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-4 >> "{"username":"admin","password":"password123"}"
+13:30:44.899 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-4 << "HTTP/1.1 200 OK[\r][\n]"
+13:30:44.899 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-4 << "Server: Cowboy[\r][\n]"
+13:30:44.899 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-4 << "Connection: keep-alive[\r][\n]"
+13:30:44.899 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-4 << "X-Powered-By: Express[\r][\n]"
+13:30:44.899 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-4 << "Content-Type: application/json; charset=utf-8[\r][\n]"
+13:30:44.914 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-4 << "Content-Length: 27[\r][\n]"
+13:30:44.914 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-4 << "Etag: W/"1b-ltj4Ivjlu3czh9Ixg+r1EA8AKZI"[\r][\n]"
+13:30:44.914 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-4 << "Date: Tue, 28 Feb 2023 18:30:45 GMT[\r][\n]"
+13:30:44.914 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-4 << "Via: 1.1 vegur[\r][\n]"
+13:30:44.914 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-4 << "[\r][\n]"
+13:30:44.914 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-4 << "{"token":"f7c17e9f465a56a"}"
+13:30:44.914 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-4 << HTTP/1.1 200 OK
+13:30:44.915 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-4 << Server: Cowboy
+13:30:44.915 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-4 << Connection: keep-alive
+13:30:44.915 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-4 << X-Powered-By: Express
+13:30:44.915 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-4 << Content-Type: application/json; charset=utf-8
+13:30:44.915 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-4 << Content-Length: 27
+13:30:44.915 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-4 << Etag: W/"1b-ltj4Ivjlu3czh9Ixg+r1EA8AKZI"
+13:30:44.915 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-4 << Date: Tue, 28 Feb 2023 18:30:45 GMT
+13:30:44.915 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-4 << Via: 1.1 vegur
+13:30:44.915 [Test worker] DEBUG karate.org.apache.http.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
+13:30:44.916 [Test worker] DEBUG karate.org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection [id: 4][route: {s}->https://restful-booker.herokuapp.com:443] can be kept alive indefinitely
+13:30:44.916 [Test worker] DEBUG karate.org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-4: set socket timeout to 0
+13:30:44.916 [Test worker] DEBUG karate.org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection released: [id: 4][route: {s}->https://restful-booker.herokuapp.com:443][total available: 1; route allocated: 1 of 5; total allocated: 1 of 10]
+13:30:44.916 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 489
+1 < 200
+1 < Server: Cowboy
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 27
+1 < Etag: W/"1b-ltj4Ivjlu3czh9Ixg+r1EA8AKZI"
+1 < Date: Tue, 28 Feb 2023 18:30:45 GMT
+1 < Via: 1.1 vegur
+{"token":"f7c17e9f465a56a"}
+13:30:44.916 [Test worker] INFO com.intuit.karate - [print] {
+  "token": "f7c17e9f465a56a"
+}
+ 
+13:30:44.916 [Test worker] INFO com.intuit.karate - [print] Tenemos el token mira :f7c17e9f465a56a 
+13:30:44.916 [Test worker] DEBUG com.jayway.jsonpath.internal.path.CompiledPath - Evaluating path: $
+13:30:44.916 [Test worker] DEBUG karate.org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: karate
+13:30:44.916 [Test worker] DEBUG karate.org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+13:30:44.916 [Test worker] DEBUG com.intuit.karate - request:
+2 > PUT https://restful-booker.herokuapp.com/booking/1
+2 > Content-Type: application/json; charset=UTF-8
+2 > Accept: application/json
+2 > Cookie: NaN
+2 > Content-Length: 170
+2 > Host: restful-booker.herokuapp.com
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_321)
+2 > Accept-Encoding: gzip,deflate
+{"firstname":"James","additionalneeds":"Breakfast","bookingdates":{"checkin":"2018-01-01","checkout":"2019-01-01"},"totalprice":111,"depositpaid":true,"lastname":"Brown"}
+
+13:30:44.916 [Test worker] DEBUG karate.org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection request: [route: {s}->https://restful-booker.herokuapp.com:443][total available: 0; route allocated: 0 of 5; total allocated: 0 of 10]
+13:30:44.916 [Test worker] DEBUG karate.org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection leased: [id: 5][route: {s}->https://restful-booker.herokuapp.com:443][total available: 0; route allocated: 1 of 5; total allocated: 1 of 10]
+13:30:44.916 [Test worker] DEBUG karate.org.apache.http.impl.execchain.MainClientExec - Opening connection {s}->https://restful-booker.herokuapp.com:443
+13:30:44.916 [Test worker] DEBUG karate.org.apache.http.impl.conn.DefaultHttpClientConnectionOperator - Connecting to restful-booker.herokuapp.com/107.22.57.98:443
+13:30:44.916 [Test worker] DEBUG karate.org.apache.http.conn.ssl.SSLConnectionSocketFactory - Connecting socket to restful-booker.herokuapp.com/107.22.57.98:443 with timeout 30000
+13:30:45.024 [Test worker] DEBUG karate.org.apache.http.conn.ssl.SSLConnectionSocketFactory - Enabled protocols: [TLSv1.2, TLSv1.1, TLSv1]
+13:30:45.024 [Test worker] DEBUG karate.org.apache.http.conn.ssl.SSLConnectionSocketFactory - Enabled cipher suites:[TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_DSS_WITH_AES_256_GCM_SHA384, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_DSS_WITH_AES_128_GCM_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_256_CBC_SHA256, TLS_DHE_DSS_WITH_AES_256_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_DSS_WITH_AES_256_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_256_GCM_SHA384, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_EMPTY_RENEGOTIATION_INFO_SCSV]
+13:30:45.024 [Test worker] DEBUG karate.org.apache.http.conn.ssl.SSLConnectionSocketFactory - Starting handshake
+13:30:45.324 [Test worker] DEBUG karate.org.apache.http.conn.ssl.SSLConnectionSocketFactory - Secure session established
+13:30:45.324 [Test worker] DEBUG karate.org.apache.http.conn.ssl.SSLConnectionSocketFactory -  negotiated protocol: TLSv1.2
+13:30:45.324 [Test worker] DEBUG karate.org.apache.http.conn.ssl.SSLConnectionSocketFactory -  negotiated cipher suite: TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+13:30:45.324 [Test worker] DEBUG karate.org.apache.http.conn.ssl.SSLConnectionSocketFactory -  peer principal: CN=*.herokuapp.com
+13:30:45.324 [Test worker] DEBUG karate.org.apache.http.conn.ssl.SSLConnectionSocketFactory -  peer alternative names: [*.herokuapp.com]
+13:30:45.324 [Test worker] DEBUG karate.org.apache.http.conn.ssl.SSLConnectionSocketFactory -  issuer principal: CN=Amazon RSA 2048 M02, O=Amazon, C=US
+13:30:45.324 [Test worker] DEBUG karate.org.apache.http.impl.conn.DefaultHttpClientConnectionOperator - Connection established 192.168.1.11:61520<->107.22.57.98:443
+13:30:45.324 [Test worker] DEBUG karate.org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-5: set socket timeout to 30000
+13:30:45.324 [Test worker] DEBUG karate.org.apache.http.impl.execchain.MainClientExec - Executing request PUT /booking/1 HTTP/1.1
+13:30:45.338 [Test worker] DEBUG karate.org.apache.http.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
+13:30:45.338 [Test worker] DEBUG karate.org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+13:30:45.338 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-5 >> PUT /booking/1 HTTP/1.1
+13:30:45.338 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-5 >> Content-Type: application/json; charset=UTF-8
+13:30:45.338 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-5 >> Accept: application/json
+13:30:45.338 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-5 >> Cookie: NaN
+13:30:45.338 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-5 >> Content-Length: 170
+13:30:45.338 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-5 >> Host: restful-booker.herokuapp.com
+13:30:45.338 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-5 >> Connection: Keep-Alive
+13:30:45.338 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-5 >> User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_321)
+13:30:45.338 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-5 >> Accept-Encoding: gzip,deflate
+13:30:45.338 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-5 >> "PUT /booking/1 HTTP/1.1[\r][\n]"
+13:30:45.338 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-5 >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+13:30:45.338 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-5 >> "Accept: application/json[\r][\n]"
+13:30:45.338 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-5 >> "Cookie: NaN[\r][\n]"
+13:30:45.338 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-5 >> "Content-Length: 170[\r][\n]"
+13:30:45.338 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-5 >> "Host: restful-booker.herokuapp.com[\r][\n]"
+13:30:45.338 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-5 >> "Connection: Keep-Alive[\r][\n]"
+13:30:45.338 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-5 >> "User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_321)[\r][\n]"
+13:30:45.338 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-5 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+13:30:45.338 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-5 >> "[\r][\n]"
+13:30:45.338 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-5 >> "{"firstname":"James","lastname":"Brown","totalprice":111,"depositpaid":true,"bookingdates":{"checkin":"2018-01-01","checkout":"2019-01-01"},"additionalneeds":"Breakfast"}"
+13:30:45.449 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-5 << "HTTP/1.1 403 Forbidden[\r][\n]"
+13:30:45.449 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-5 << "Server: Cowboy[\r][\n]"
+13:30:45.449 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-5 << "Connection: keep-alive[\r][\n]"
+13:30:45.449 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-5 << "X-Powered-By: Express[\r][\n]"
+13:30:45.449 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-5 << "Content-Type: text/plain; charset=utf-8[\r][\n]"
+13:30:45.449 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-5 << "Content-Length: 9[\r][\n]"
+13:30:45.449 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-5 << "Etag: W/"9-PatfYBLj4Um1qTm5zrukoLhNyPU"[\r][\n]"
+13:30:45.449 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-5 << "Date: Tue, 28 Feb 2023 18:30:45 GMT[\r][\n]"
+13:30:45.449 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-5 << "Via: 1.1 vegur[\r][\n]"
+13:30:45.449 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-5 << "[\r][\n]"
+13:30:45.449 [Test worker] DEBUG karate.org.apache.http.wire - http-outgoing-5 << "Forbidden"
+13:30:45.449 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-5 << HTTP/1.1 403 Forbidden
+13:30:45.449 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-5 << Server: Cowboy
+13:30:45.449 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-5 << Connection: keep-alive
+13:30:45.449 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-5 << X-Powered-By: Express
+13:30:45.449 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-5 << Content-Type: text/plain; charset=utf-8
+13:30:45.449 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-5 << Content-Length: 9
+13:30:45.449 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-5 << Etag: W/"9-PatfYBLj4Um1qTm5zrukoLhNyPU"
+13:30:45.449 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-5 << Date: Tue, 28 Feb 2023 18:30:45 GMT
+13:30:45.449 [Test worker] DEBUG karate.org.apache.http.headers - http-outgoing-5 << Via: 1.1 vegur
+13:30:45.449 [Test worker] DEBUG karate.org.apache.http.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
+13:30:45.449 [Test worker] DEBUG karate.org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection [id: 5][route: {s}->https://restful-booker.herokuapp.com:443] can be kept alive indefinitely
+13:30:45.449 [Test worker] DEBUG karate.org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-5: set socket timeout to 0
+13:30:45.449 [Test worker] DEBUG karate.org.apache.http.impl.conn.PoolingHttpClientConnectionManager - Connection released: [id: 5][route: {s}->https://restful-booker.herokuapp.com:443][total available: 1; route allocated: 1 of 5; total allocated: 1 of 10]
+13:30:45.449 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 533
+2 < 403
+2 < Server: Cowboy
+2 < Connection: keep-alive
+2 < X-Powered-By: Express
+2 < Content-Type: text/plain; charset=utf-8
+2 < Content-Length: 9
+2 < Etag: W/"9-PatfYBLj4Um1qTm5zrukoLhNyPU"
+2 < Date: Tue, 28 Feb 2023 18:30:45 GMT
+2 < Via: 1.1 vegur
+Forbidden
+13:30:45.461 [Test worker] INFO com.intuit.karate - [print] Forbidden 
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
